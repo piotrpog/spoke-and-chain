@@ -1,0 +1,9 @@
+actor: AcceptanceTester
+modules:
+    enabled:
+        - PhpBrowser:
+            url: 'http://localhost/spoke5/spoke-and-chain/web/'
+        - REST:
+           depends: PhpBrowser
+           url: 'http://localhost/spoke5/spoke-and-chain/web/'
+step_decorators: ~   

@@ -1,0 +1,18 @@
+{% set query = craft.app.request.get('searchText') %}
+{% set searchResults = craft.entries.search(query).all() %}
+
+<form action="">
+    <input id="searchText" name="searchText" value="{{query}}">
+    <button id="submit">search</button>
+</form>
+
+{% if query is not empty %}
+    Results for {{query}}:
+    <br>
+    {% for item in searchResults %}
+        <a class="result-link" href="{{item.url}}">
+            {{item.title}}
+        </a>
+        <br>
+    {% endfor %}
+{% endif %}
