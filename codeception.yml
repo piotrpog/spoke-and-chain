@@ -17,6 +17,6 @@ modules:
       projectConfig: {}
       migrations: []
       plugins: []
-      cleanup: true
+      cleanup: false
       transaction: true
       dbSetup: { clean: false, setupCraft: false }
