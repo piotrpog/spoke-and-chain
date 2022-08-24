@@ -1,4 +1,4 @@
-This is a fork of official Craft CMS demo site, [Spoke & Chain](https://github.com/craftcms/spoke-and-chain), created as the practical demonstration for [Frontend testing for Craft CMS]() article on [Fortrabbit blog](https://blog.fortrabbit.com/). It includes code for testing frontend of website using two frameworks - Cypress and Codeception.
+This is a fork of official Craft CMS demo site, [Spoke & Chain](https://github.com/craftcms/spoke-and-chain), created as the practical demonstration for [Frontend testing for Craft CMS]() article on [Fortrabbit blog](https://blog.fortrabbit.com/). It includes code for testing frontend of website using two frameworks - Cypress and Codeception. Both set of examples test the same things, so reader can compare them working in practice.
 
 ## Installation
 
