@@ -16,4 +16,4 @@ To run Cypress GUI, execute `npx cypress open` command.
 
 Codeception packages are already included `composer.json` file. Before you run tests, copy main `.env` file to `tests` directory. If you wish, you can enter there connection data for separate database which will be used only for tests.
 
-To run Codeception tests, execute `./vendor/bin/codecept run acceptance` command. You can also execute single tests, like this: `./vendor/bin/codecept run acceptance testClass` - whee `testClass` is class name of single test.
+To run Codeception tests, execute `./vendor/bin/codecept run acceptance` command. You can also execute single tests, like this: `./vendor/bin/codecept run acceptance testClass` - where `testClass` is class name of single test.
