@@ -1,6 +1,7 @@
 module.exports = {
   e2e: {
     baseUrl: 'https://spokeandchain.nitro/',
+    scrollBehavior: 'nearest',
   },
   env: {
     "CP_TRIGGER": "admin",
