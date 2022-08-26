@@ -14,7 +14,7 @@ sizes.forEach((size) => {
             cy.visit('/product/san-quentin-24')
 
             cy.get('#buy button[type=submit]')
-                .click({scrollBehavior: 'center'});
+                .click();
 
             // Navigate to the cart
             cy.get('button.cart-toggle')
@@ -29,48 +29,47 @@ sizes.forEach((size) => {
                 .contains('Continue as Guest');
 
             cy.get('#guest-checkout input[type=text]')
-                .type(this.user.email, {scrollBehavior: 'center'});
+                .type(this.user.email);
 
             cy.get('#guest-checkout button[type=submit]')
-                .click({scrollBehavior: 'center'});
+                .click();
 
             // Shipping address
             cy.get('form#checkout-address input[name="shippingAddress[firstName]"]')
-                .type(this.user.address.firstName, {scrollBehavior: 'center'});
+                .type(this.user.address.firstName);
             cy.get('form#checkout-address input[name="shippingAddress[lastName]"]')
-                .type(this.user.address.lastName, {scrollBehavior: 'center'});
+                .type(this.user.address.lastName);
             cy.get('form#checkout-address input[name="shippingAddress[addressLine1]"]')
-                .type(this.user.address.addressLine1, {scrollBehavior: 'center'});
+                .type(this.user.address.addressLine1);
             cy.get('form#checkout-address input[name="shippingAddress[locality]"]')
-                .type(this.user.address.locality, {scrollBehavior: 'center'});
+                .type(this.user.address.locality);
             cy.get('form#checkout-address input[name="shippingAddress[postalCode]"]')
-                .type(this.user.address.postalCode, {scrollBehavior: 'center'});
+                .type(this.user.address.postalCode);
             cy.get('form#checkout-address select[name="shippingAddress[countryCode]"]')
-                .scrollIntoView({offset: {top: 600, left: 0}})
                 .select(this.user.address.countryCode);
             cy.get('form#checkout-address button[type=submit]')
-                .click({scrollBehavior: 'center'});
+                .click();
 
             // Use the default shipping method
             cy.get('form#checkout-shipping-method input[type=radio][value="freeShipping"]')
-                .click({scrollBehavior: 'center'});
+                .click();
 
             cy.get('form#checkout-shipping-method button[type=submit]')
-                .click({scrollBehavior: 'center'});
+                .click();
 
             // Fill credit card details and pay
             cy.get('form#checkout-payment input[name="paymentForm[dummy][firstName]"]')
-                .type(this.user.card.firstName, {scrollBehavior: 'center'});
+                .type(this.user.card.firstName);
             cy.get('form#checkout-payment input[name="paymentForm[dummy][lastName]"]')
-                .type(this.user.card.lastName, {scrollBehavior: 'center'});
+                .type(this.user.card.lastName);
             cy.get('form#checkout-payment input[name="paymentForm[dummy][number]"]')
-                .type(this.user.card.number, {scrollBehavior: 'center'});
+                .type(this.user.card.number);
             cy.get('form#checkout-payment input[name="paymentForm[dummy][expiry]"]')
-                .type(this.user.card.expiry, {scrollBehavior: 'center'});
+                .type(this.user.card.expiry);
             cy.get('form#checkout-payment input[name="paymentForm[dummy][cvv]"]')
-                .type(this.user.card.cvv, {scrollBehavior: 'center'});
+                .type(this.user.card.cvv);
             cy.get('form#checkout-payment button[type=submit]')
-                .click({scrollBehavior: 'center'});
+                .click();
 
             // Success
             cy.get('h1')

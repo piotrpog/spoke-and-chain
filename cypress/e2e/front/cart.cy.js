@@ -29,7 +29,7 @@ sizes.forEach((size) => {
 
                 // Remove the line item
                 cy.get('#remove-trigger-' + lineItemId)
-                    .click({scrollBehavior: 'center'})
+                    .click()
 
                 // Check that the line item has properly been removed
                 cy.get('#line-item-' + lineItemId).should('not.exist')
@@ -42,7 +42,7 @@ sizes.forEach((size) => {
 
             // Click link to enter a coupon
             cy.get('form#cart a.coupon-trigger')
-                .click({scrollBehavior: 'center'})
+                .click()
 
             // Use the `15OFF` coupon code
             cy.get('form#cart input[name=couponCode]')
@@ -50,7 +50,7 @@ sizes.forEach((size) => {
 
             // Apply the coupon
             cy.get('form#cart button[type=submit].coupon-apply')
-                .click({scrollBehavior: 'center'})
+                .click()
 
             // Check that the cart contains a discount row
             cy.get('form#cart div.discount-row')

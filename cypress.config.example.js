@@ -2,4 +2,22 @@ module.exports = {
   e2e: {
     baseUrl: 'https://spokeandchain.nitro/',
   },
+  env: {
+    "CP_TRIGGER": "admin",
+    "CP_LOGIN": "support@craftcms.com",
+    "CP_PASSWORD": "NewPassword",
+    "ENABLE_LIGHTHOUSE": true,
+    "LIGHTHOUSE_OPTIONS": {
+      "performance": 0,
+      "accessibility": 90,
+      "best-practices": 0,
+      "seo": 0,
+      "pwa": 0
+    },
+    "ENABLE_PA11Y": false,
+    "PA11Y_OPTIONS": {
+      "runners": ["htmlcs"],
+      "standard": "WCAG2AA"
+    }
+  }  
 };
