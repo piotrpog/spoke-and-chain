@@ -2,6 +2,18 @@ module.exports = {
   e2e: {
     baseUrl: 'https://spokeandchain.nitro/',
     scrollBehavior: 'nearest',
+    setupNodeEvents(on, config) {
+            
+          on("before:browser:launch", (browser = {}, launchOptions) => {
+            prepareAudit(launchOptions);
+          });
+
+          on("task", {
+            lighthouse: lighthouse(),
+            pa11y: pa11y(),
+          }); 
+
+    }    
   },
   env: {
     "CP_TRIGGER": "admin",
