@@ -1,3 +1,5 @@
+const { lighthouse, pa11y, prepareAudit } = require("cypress-audit");
+
 module.exports = {
   e2e: {
     baseUrl: 'https://spokeandchain.nitro/',
