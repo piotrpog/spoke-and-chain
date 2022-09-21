@@ -2,8 +2,8 @@
   "env": {
     "SITE_URL": "http://spokeandchain.nitro/",
     "CP_TRIGGER": "admin",
-    "CP_LOGIN": "support@craftcms.com",
-    "CP_PASSWORD": "NewPassword",
+    "CP_LOGIN": "",
+    "CP_PASSWORD": "",
     "ENABLE_LIGHTHOUSE": true,
     "LIGHTHOUSE_OPTIONS": {
       "performance": 0,
