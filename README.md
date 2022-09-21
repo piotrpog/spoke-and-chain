@@ -8,7 +8,7 @@ To install the site, run `composer install` and create `.env` file based on `.en
 
 To install Cypress tests, run `npm install`. One of the packages included in the project, `webapp-webpack-plugin`, is compatible only with Node 12 - if you want to install Cypress using newer version of Node, you need to remove this package from `package.json` before installation. Doing so, won't stop you form using Cypress tests in any way. This problematic package is related to frontend assets compilation, but repository already includes compiled JS and CSS files, so to check testing functionmality, we dont need to compile any assets.
 
-Before you run Cypress, you need to create a `cypress.json` file which will provide configuration and environmental variables for our tests. Spoke & Chain contains `cypress.example.json` which you can rename to `cypress.json`. There you can set base website URL (depending on your server setup) and control panel login and password.
+Before you run Cypress, you need to create a `cypress.config.js` file which will provide configuration and environmental variables for our tests. Repository contains `cypress.config.example.js` which you can rename to `cypress.json`. There you can set base website URL (depending on your server setup) and control panel login and password.
 
 To run Cypress GUI, execute `npx cypress open` command.
 
