@@ -19,8 +19,8 @@ module.exports = {
   },
   env: {
     "CP_TRIGGER": "admin",
-    "CP_LOGIN": "support@craftcms.com",
-    "CP_PASSWORD": "NewPassword",
+    "CP_LOGIN": "admin@craftcms.com",
+    "CP_PASSWORD": "__replace__",
     "ENABLE_LIGHTHOUSE": true,
     "LIGHTHOUSE_OPTIONS": {
       "performance": 0,
